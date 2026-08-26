@@ -6,7 +6,7 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
-  //working with buttons:
+  //working with buttons usestates:
 const goodFeedBack = (feedBack) => {
   console.log('feedBackType', feedBack);
   setGood(feedBack)
@@ -46,7 +46,7 @@ const positive = (good, neutral, bad) => {
 }
 const Statistics = ({ good, neutral, bad }) => {
   const total = sum(good, neutral, bad)
-
+//pop up when value is entered:
   if (total === 0) {
     return <p>No feedback given</p>
   }
