@@ -1,4 +1,5 @@
 const Filter = ({ searchTerm, onSearchChange }) => (
+  
   <div>
     filter shown with: <input
       value={searchTerm}
