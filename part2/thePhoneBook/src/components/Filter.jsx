@@ -1,10 +1,13 @@
 const Filter = ({ searchTerm, onSearchChange }) => (
   
   <div>
-    filter shown with: <input
-      value={searchTerm}
-      onChange={onSearchChange}
-    />
+    filter shown with: 
+    <div>
+      <input
+        value={searchTerm}
+        onChange={onSearchChange}
+      />
+    </div>
   </div>
 )
 

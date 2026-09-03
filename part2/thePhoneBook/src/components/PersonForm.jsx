@@ -1,16 +1,22 @@
 const PersonForm = ({ newName, newNumber, onNameChange, onNumberChange, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <div>
-      name: <input
-        value={newName}
-        onChange={onNameChange}
-      />
+      name: 
+      <div>
+        <input
+          value={newName}
+          onChange={onNameChange}
+        />
+      </div>
     </div>
     <div>
-      number: <input
-        value={newNumber}
-        onChange={onNumberChange}
-      />
+      number: 
+      <div>
+        <input
+          value={newNumber}
+          onChange={onNumberChange}
+        />
+      </div>
     </div>
     <div>
       <button type="submit">add</button>

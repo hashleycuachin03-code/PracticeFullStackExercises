@@ -18,12 +18,58 @@ const App = () => {
         setNotes(response.data)
       })
   }
-
   useEffect(hook, [])
-  
   console.log('render', notes.length, 'notes')
 
-  // ...
+  // adding a new note to the list of notes and db.json
+  const addNote = event => {
+    event.preventDefault()
+    const noteObject = {
+      content: newNote,
+      important: Math.random() < 0.5,
+    }
+
+    axios
+      .post('http://localhost:3001/notes', noteObject)
+      .then(response => {
+        console.log(response)
+      })
+  }
+
+//handling the change of the input field
+  const handleNoteChange = (event) => {
+    console.log(event.target.value)
+    setNewNote(event.target.value)
+  }
+  
+  //show all notes or only important notes
+  const notesToShow = showAll
+    ? notes
+    : notes.filter(note => note.important)
+
+  return (
+    <div>
+      <h1>Notes</h1>
+      <div>
+        <button onClick={() => setShowAll(!showAll)}>
+          show {showAll ? 'important' : 'all'}
+        </button>
+      </div>
+      <ul>
+        {notesToShow.map(note => 
+          <Note key={note.id} note={note} />
+        )}
+      </ul>
+      <form onSubmit={addNote}>
+        <input 
+          value={newNote} 
+          onChange={handleNoteChange} 
+        />
+        <button type="submit">save</button>
+      </form>
+    </div>
+  )
 }
+
 
 export default App

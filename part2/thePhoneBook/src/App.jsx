@@ -11,7 +11,7 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
 
-  //fetch data "arto hellas" from the server using axios
+  //fetch data "arto hellas" from db.json server using axios
     useEffect(() => {
       axios.get('http://localhost:3001/persons')
         .then(response => {
@@ -45,7 +45,7 @@ const App = () => {
         searchTerm={searchTerm}
         onSearchChange={(event) => setSearchTerm(event.target.value)}
       />
-      <h3>Add a new</h3>
+      <h3>Add a new:</h3>
       <PersonForm
         newName={newName}
         newNumber={newNumber}
@@ -53,7 +53,7 @@ const App = () => {
         onNumberChange={(event) => setNewNumber(event.target.value)}
         onSubmit={addPerson}
       />
-      <h3>Numbers</h3>
+      <h3>Numbers:</h3>
       <Persons persons={personsToShow} />
     </div>
   )
