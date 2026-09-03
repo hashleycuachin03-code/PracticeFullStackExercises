@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import App from './App'
+import axios from 'axios'
 
 const notes = [
   {
@@ -19,6 +20,16 @@ const notes = [
     important: true
   }
 ]
+
+const promise = axios.get('http://localhost:3001/notes')
+console.log(promise)
+
+promise.then(response => {
+  console.log(response)
+})
+
+const promise2 = axios.get('http://localhost:3001/foobar')
+console.log(promise2)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App notes={notes} />);
