@@ -10,12 +10,13 @@ const App = () => {
     const [showAll, setShowAll] = useState(true)
 
     //fetching the notes from db.json
-    const hook = () => 
+    const hook = () => {
       noteService
         .getAll()
         .then(initialNotes => {
           setNotes(initialNotes)
         })
+    }
     useEffect(hook, [])
     console.log('render', notes.length, 'notes')
 
