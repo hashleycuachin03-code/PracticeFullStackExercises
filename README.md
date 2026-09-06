@@ -13,7 +13,7 @@ PracticeFullStackExercises/
 ├── part1/    # Fundamentals of React, state, and event handling
 ├── part2/    # Working with collections, forms, external APIs, and local state
 └── README.md # Documentation
-
+```
 ---
 
 ## What You Will Learn
