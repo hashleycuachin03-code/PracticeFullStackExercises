@@ -1,32 +1,52 @@
 # Practice Full Stack Exercises
 
-Welcome to **Practice Full Stack Exercises**! This repository contains hands-on sample exercises and practical applications designed to help you build a deep, intuitive understanding of full-stack web development.
+Welcome to [Practice Full Stack Exercises](https://github.com/hashleycuachin03-code/PracticeFullStackExercises)! This repository contains hands-on sample exercises and practical applications designed to build a deep, intuitive understanding of modern full-stack web development.
 
-Whether you are just getting started or reinforcing core web development principles, these exercises walk through the real-world concepts, patterns, and workflows used by full-stack developers.
-
----
-
-##  What's Inside
-
-The exercises in this repository are organized into progressive parts, matching key full-stack concepts:
-
-* **`part1/`**: Fundamentals of frontend development, component state, and UI logic (including exercises like *Unicafe* and *Anecdotes*).
-* **`part2/`**: Working with collections, forms, external APIs, and local state management (including test applications and the *Phonebook* exercise).
+Whether you are learning core frontend concepts or connecting user interfaces to external APIs, these exercises demonstrate real-world patterns, component architecture, and full-stack workflows.
 
 ---
 
-##  What You Will Learn
+## 📁 Repository Structure
 
-By exploring and practicing with the projects in this repository, you will get hands-on experience with:
+```text
+PracticeFullStackExercises/
+├── part1/    # Fundamentals of React, state, and event handling
+├── part2/    # Working with collections, forms, external APIs, and local state
+└── README.md # Documentation
 
-* **Frontend UI Development:** Building modular, reusable user interfaces using modern JavaScript/React components.
-* **State & Event Handling:** Managing application state, user inputs, and reactive updates effectively.
-* **API Integration:** Connecting frontend interfaces to backend services, handling asynchronous HTTP requests, and rendering dynamic data.
-* **Full-Stack Workflows:** Understanding how data flows end-to-end—from backend service models down to frontend components.
+---
+
+## What You Will Learn
+* **Frontend UI Development:** Modular architecture using React, functional components, and JSX.
+
+* **State & Event Management:** Efficient handling of component state (useState), user input, and dynamic UI updates.
+
+* **Asynchronous Data Handling:** Fetching data using axios or fetch, handling Promises, and using side-effects (useEffect).
+
+* **REST API Integration:** Managing end-to-end data flow between frontend forms and backend server environments.
+
+# Contents & Key Exercises
+## Part 1: React Fundamentals & Component Logic
+Course Information (courseinfo): Breakdown of React components, props, and passing data between parent and child components.
+
+* **Unicafe (unicafe)**: Interactive feedback collector demonstrating complex component state, event handlers, and computed statistics.
+
+* **Anecdotes (anecdotes)**: Application exploring array manipulation, random selection, and managing complex state updates.
+
+## Part 2: Communicating with Servers & Collections
+Course Information Refactor: Rendering collections and dynamic components using JavaScript functional array methods (map, reduce).
+
+* **Phonebook Application (phonebook)**: Full CRUD frontend featuring form handling, live search/filtering, and async integration with HTTP endpoints (json-server / REST API).
+
+Data for Countries: Application fetching real-time data from external APIs based on dynamic user input.
 
 ---
 
 ##  Getting Started
+
+
+## Prerequisites
+Make sure you have Node.js and npm installed on your system.
 
 **How to Use These Exercises**
 Feel free to clone, experiment, and break things! The best way to learn full-stack development is by modifying existing code, adding new features, or recreating these sample applications from scratch.
@@ -34,3 +54,26 @@ Feel free to clone, experiment, and break things! The best way to learn full-sta
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/hashleycuachin03-code/PracticeFullStackExercises.git](https://github.com/hashleycuachin03-code/PracticeFullStackExercises.git)
+
+**Navigate to the target exercise directory:**
+
+cd PracticeFullStackExercises/part1/unicafe
+# or
+cd PracticeFullStackExercises/part2/phonebook
+
+**Install dependencies:**
+
+npm install
+
+**Run the development server:**
+
+npm start
+# or
+npm run dev
+
+ ## Contributing & Usage
+Feel free to clone, experiment, or build upon these examples to practice full-stack development!
+
+
+
+
