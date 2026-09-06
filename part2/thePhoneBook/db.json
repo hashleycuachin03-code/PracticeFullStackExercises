@@ -19,11 +19,6 @@
       "name": "Arto Hellas",
       "number": "009080607086",
       "id": "B4zVjcQ0NbY"
-    },
-    {
-      "name": "youboi",
-      "number": "",
-      "id": "S2SO8NESdzk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

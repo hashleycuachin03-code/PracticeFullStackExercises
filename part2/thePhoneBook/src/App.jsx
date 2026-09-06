@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Filter from './components/Filter'
+import Notifications from './components/Notifications'
 import PersonForm from './components/PersonForm'
 import Persons from './components/Persons'
 import personService from './services/persons'
@@ -10,6 +11,7 @@ const App = () => {
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
+  const [notification, setNotification] = useState(null)
 
   //fetch data "arto hellas" from db.json server using persona.js module
     useEffect(() => {
@@ -18,6 +20,18 @@ const App = () => {
           setPersons(initialPersons)
         })
     }, [])
+
+  useEffect(() => {
+    if (!notification) {
+      return
+    }
+
+    const timeoutId = setTimeout(() => {
+      setNotification(null)
+    }, 5000)
+
+    return () => clearTimeout(timeoutId)
+  }, [notification])
 
   console.log('render', persons.length, 'persons')
 
@@ -41,6 +55,16 @@ const App = () => {
             ))
             setNewName('')
             setNewNumber('')
+            setNotification({
+              message: `${returnedPerson.name}'s number was updated`,
+              type: 'success'
+            })
+          })
+          .catch(() => {
+            setNotification({
+              message: `${existingPerson.name} was already removed from the server`,
+              type: 'error'
+            })
           })
       }
       return
@@ -51,6 +75,16 @@ const App = () => {
         setPersons(persons.concat(postPerson))
         setNewName('')
         setNewNumber('')
+        setNotification({
+          message: `${postPerson.name} was added to the phonebook`,
+          type: 'success'
+        })
+      })
+      .catch(() => {
+        setNotification({
+          message: 'The person could not be added to the phonebook',
+          type: 'error'
+        })
       })
   }
 
@@ -68,6 +102,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
+      <Notifications message={notification?.message} type={notification?.type} />
       <Filter
         searchTerm={searchTerm}
         onSearchChange={(event) => setSearchTerm(event.target.value)}
