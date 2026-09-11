@@ -83,7 +83,7 @@ app.post('/api/persons', (request,response) => {
     }
 
     persons = persons.concat(person)
-    console.log(person)
+    console.log('added in phonebook:',person)
     response.json(person)
 })
 
