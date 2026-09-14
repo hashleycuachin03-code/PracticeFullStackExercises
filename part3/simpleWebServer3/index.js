@@ -2,10 +2,15 @@
 const http = require('http')
 const express = require('express')
 const app = express()
-const cors = require('cors')
-//cross origin resource sharing. allow sharing in different ports. 5173 => 3001
-app.use(cors())
+//const cors = require('cors')<--
 
+//middlewares:
+//cross origin resource sharing. allow sharing in different ports. 5173 => 3001
+//app.use(cors()) <--
+//To make Express show static content,
+//the page index.html and the JavaScript, etc., 
+//it fetches, we need a built-in middleware from Express called static.
+app.use(express.static('dist'))
 //without json parser the body property would be undefined
 app.use(express.json())
 
