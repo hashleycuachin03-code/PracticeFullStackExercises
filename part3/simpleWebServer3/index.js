@@ -2,6 +2,9 @@
 const http = require('http')
 const express = require('express')
 const app = express()
+const cors = require('cors')
+//cross origin resource sharing. allow sharing in different ports. 5173 => 3001
+app.use(cors())
 
 //without json parser the body property would be undefined
 app.use(express.json())
@@ -21,6 +24,11 @@ let notes = [
         id: "3",
         content: "GET and POST are the most important methods of HTTP protocol",
         important: true
+    },
+    {
+        id: "4",
+        content: "this is ya boi jaymark",
+        important: true
     }
 ]
 
@@ -34,6 +42,10 @@ const App = http.createServer((request, response) => {
 //defines an event handler that is used to handle HTTP GET requests made to the application's / root
 app.get('/', (request, response) => {
     response.send('<h1> Hello World!</h1>')
+})
+// get notes from backend index.js 
+app.get('/api/notes', (request, response) => {
+    response.send(notes)
 })
 //defines an event handler that handles HTTP GET requests made to the notes path of the application
 app.get('/api/notes/:id', (request, response) => {
@@ -84,7 +96,9 @@ app.post('/api/notes', (request, response) => {
 
 //start the server and listen on port 3001
 //bind the http server assigned to the app variable.
-const PORT = 3001
-app.listen(PORT)
-console.log(`Server running on port ${PORT}`)
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+})
+
 
