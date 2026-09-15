@@ -1,6 +1,25 @@
-# React + Vite
+# Data for Countries
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React + Vite app uses the OpenWeather API to display weather for a country's capital.
+
+## Setup
+
+Create a `.env.local` file in the project root and add your OpenWeather API key:
+
+```env
+VITE_SOME_KEY=your_openweathermap_api_key
+```
+
+The app reads this value from `import.meta.env.VITE_SOME_KEY`, so you only need to set it once. Restart the Vite dev server after changing the file. Do not commit `.env.local` or your real API key.
+
+Install dependencies and start the app:
+
+```bash
+npm install
+npm run dev
+```
+
+You can use `.env.example` as a template.
 
 Currently, two official plugins are available:
 
