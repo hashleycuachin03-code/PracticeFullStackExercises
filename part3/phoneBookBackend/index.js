@@ -1,7 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
-
+//front end static
+app.use(express.static('dist'))
 //always check one line
 app.use(express.json())
 morgan.token('body', (request) => JSON.stringify(request.body))
