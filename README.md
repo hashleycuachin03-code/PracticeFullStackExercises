@@ -100,7 +100,7 @@ npm run dev # or npm start
 
 ## Contributing & Usage
 
-Feel free to clone this repository, experiment with the code, add features, or use it as a reference for your own learning journey in full-stack development.
+Feel free to clone this repository, experiment with the code, add features, or use it as a reference for your own learning journey in full-stack development...
 
 ```
 
