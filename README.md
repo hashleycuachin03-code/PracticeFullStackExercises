@@ -101,12 +101,5 @@ npm run dev # or npm start
 
 ## Contributing & Usage
 
-<<<<<<< HEAD
-Feel free to clone this repository, experiment with the code, add features, or use it as a reference for your own learning journey in full-stack development.
-=======
 Feel free to clone this repository, experiment with the code, add features, or use it as a reference for your own learning journey in full-stack development...
 
-```
-
-```
->>>>>>> 7b05b1219d86cf8825ef279b3725478f450a2329
