@@ -68,7 +68,6 @@ Ensure you have **Node.js** (v18+ recommended) and **npm** installed on your mac
    cd PracticeFullStackExercises
    ```
 
-````
 
 2. **Navigate to the target exercise directory:**
 ```bash
